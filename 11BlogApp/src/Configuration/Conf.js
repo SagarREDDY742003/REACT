@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const config = {
+const conf = {
     appwriteUrl: String(process.env.REACT_APP_APPWRITE_URL),
     appwriteProjectId: String(process.env.REACT_APP_PROJECT_ID),
     appwriteDatabaseId: String(process.env.REACT_APP_DATABASE_ID),
@@ -7,4 +7,4 @@ const config = {
     appwriteBucketId: String(process.env.REACT_APP_BUCKET_ID)
 }
 
-export default config
+export default conf

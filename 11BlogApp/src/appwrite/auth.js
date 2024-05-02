@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-catch */
-import config from '../Configuration/Config'
+import conf from '../Configuration/Conf'
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
@@ -7,7 +7,7 @@ export class AuthService {
     account;
 
     constructor(){
-        this.client.setEndpoint(config.appwriteUrl).setProject(config.appwriteProjectId)
+        this.client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId)
         this.account = new Account(this.client)
     }
 
