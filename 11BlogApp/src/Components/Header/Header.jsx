@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import Container from '../Container/Container.jsx'
-import Logo from "../Logo.jsx"
+import Logo from "../Logo"
 import { Link } from 'react-router-dom'
 import LogoutBtn from './LogoutBtn'
 import { useNavigate } from 'react-router-dom'
@@ -40,7 +40,7 @@ function Header() {
     ]
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-3 shadow bg-sky-900'>
         <Container>
             <nav className='flex'>
                 <div className='mr-4'>
@@ -48,11 +48,11 @@ function Header() {
                         <Logo />
                     </Link>
                 </div>
-                <ul className='flex ml-auto'>
+                <ul className='flex ml-auto text-white'>
                     {
                         navItems.map((item) => item.active ? (
                             <li key={item.name}>
-                                <button onClick={() => navigate(item.slug)} className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'>{item.name}</button>
+                                <button onClick={() => navigate(item.slug)} className='inline-block text-white px-6 py-2 duration-200 hover:bg-blue-100 hover:text-black rounded-full'>{item.name}</button>
                             </li>
                         ) : null)
                     }

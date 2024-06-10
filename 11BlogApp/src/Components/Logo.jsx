@@ -4,7 +4,7 @@ import React from 'react'
 
 function Logo({width = "100%"}) {
   return (
-    <img src='' style={{width}} alt='Logo placeholder'/>
+    <img src={`https://flyclipart.com/thumb2/free-social-media-icons-792667.png`} style={{width}} alt='Logo placeholder' className=' w-10 h-10 rounded-full'/>
   )
 }
 

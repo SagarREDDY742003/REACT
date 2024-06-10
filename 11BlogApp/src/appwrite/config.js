@@ -87,7 +87,7 @@ export class Service{
     // UPLOAD FILE
     async uploadFile(file){
         try {
-            return await this.bucket.createFile(conf.appwriteBucketId, ID.unique, file)
+            return await this.bucket.createFile(conf.appwriteBucketId, ID.unique(), file)
         } catch (error) {
             console.log("AppWrite service :: uploadFile() ::", error);
             return false
@@ -105,8 +105,8 @@ export class Service{
     }
 
     // GET FILE PREVIEW
-    async getFilePreview(fileId){
-        return await this.bucket.getFilePreview(
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(
             conf.appwriteBucketId, 
             fileId
         ).href
